@@ -43,6 +43,7 @@ Release channels have their own copy of this changelog:
 limited backward compatibility for v0.10 and v0.9. Please upgrade to Borsh v1.
   * Operators running their own bigtable instances need to create the `entries`
     table before upgrading their warehouse nodes
+  * Removal of all references to "Mainnet Beta" in favor of "Beta"
 
 ## [1.17.0]
 * Changes

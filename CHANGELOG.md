@@ -9,7 +9,7 @@ and follows a [Backwards Compatibility Policy](https://docs.solanalabs.com/backw
 
 Release channels have their own copy of this changelog:
 * [edge - v2.0](#edge-channel)
-* [beta - v1.18](https://github.com/solana-labs/solana/blob/v1.18/CHANGELOG.md)
+* [mainnet - v1.18](https://github.com/solana-labs/solana/blob/v1.18/CHANGELOG.md)
 * [stable - v1.17](https://github.com/solana-labs/solana/blob/v1.17/CHANGELOG.md)
 
 <a name="edge-channel"></a>

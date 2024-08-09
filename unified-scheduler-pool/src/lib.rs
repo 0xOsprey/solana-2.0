@@ -392,7 +392,7 @@ fn initialized_result_with_timings() -> ResultWithTimings {
 
 // Currently, simplest possible implementation (i.e. single-threaded)
 // this will be replaced with more proper implementation...
-// not usable at all, especially for mainnet-beta
+// not usable at all, especially for mainnet
 #[derive(Debug)]
 pub struct PooledScheduler<TH: TaskHandler> {
     inner: PooledSchedulerInner<Self, TH>,

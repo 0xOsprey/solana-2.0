@@ -278,7 +278,7 @@ mod tests {
     #[test]
     fn test_add_genesis_accounts() {
         let clusters_and_expected_lamports = [
-            (ClusterType::MainnetBeta, 500_000_000 * LAMPORTS_PER_SOL),
+            (ClusterType::Mainnet, 500_000_000 * LAMPORTS_PER_SOL),
             (ClusterType::Testnet, 500_000_000 * LAMPORTS_PER_SOL),
             (ClusterType::Devnet, 500_000_000 * LAMPORTS_PER_SOL),
             (ClusterType::Development, 0),

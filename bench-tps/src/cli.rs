@@ -141,7 +141,7 @@ pub fn build_args<'a>(version: &'_ str) -> App<'a, '_> {
                 .validator(is_url_or_moniker)
                 .help(
                     "URL for Solana's JSON RPC or moniker (or their first letter): \
-                       [mainnet-beta, testnet, devnet, localhost]",
+                       [mainnet, testnet, devnet, localhost]",
                 ),
         )
         .arg(

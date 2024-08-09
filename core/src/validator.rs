@@ -1180,7 +1180,7 @@ impl Validator {
         // the respective handle) to initialize the turbine QUIC endpoint.
         let current_runtime_handle = tokio::runtime::Handle::try_current();
         let turbine_quic_endpoint_runtime = (current_runtime_handle.is_err()
-            && genesis_config.cluster_type != ClusterType::MainnetBeta)
+            && genesis_config.cluster_type != ClusterType::Mainnet)
             .then(|| {
                 tokio::runtime::Builder::new_multi_thread()
                     .enable_all()
@@ -1193,7 +1193,7 @@ impl Validator {
             turbine_quic_endpoint,
             turbine_quic_endpoint_sender,
             turbine_quic_endpoint_join_handle,
-        ) = if genesis_config.cluster_type == ClusterType::MainnetBeta {
+        ) = if genesis_config.cluster_type == ClusterType::Mainnet {
             let (sender, _receiver) = tokio::sync::mpsc::channel(1);
             (None, sender, None)
         } else {
@@ -1213,7 +1213,7 @@ impl Validator {
 
         // Repair quic endpoint.
         let repair_quic_endpoint_runtime = (current_runtime_handle.is_err()
-            && genesis_config.cluster_type != ClusterType::MainnetBeta)
+            && genesis_config.cluster_type != ClusterType::Mainnet)
             .then(|| {
                 tokio::runtime::Builder::new_multi_thread()
                     .enable_all()
@@ -1222,7 +1222,7 @@ impl Validator {
                     .unwrap()
             });
         let (repair_quic_endpoint, repair_quic_endpoint_sender, repair_quic_endpoint_join_handle) =
-            if genesis_config.cluster_type == ClusterType::MainnetBeta {
+            if genesis_config.cluster_type == ClusterType::Mainnet {
                 let (sender, _receiver) = tokio::sync::mpsc::channel(1);
                 (None, sender, None)
             } else {

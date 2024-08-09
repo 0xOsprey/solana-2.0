@@ -90,7 +90,7 @@ test-stable-sbf)
   # built for different target each time. An additional compilation of
   # solana-program is performed when simulation crate is built. This
   # last compiled solana-program is of different version, normally the
-  # latest mainbeta release version.
+  # latest mainnet release version.
   solana_program_count=$(grep -c 'solana-program v' cargo.log)
   rm -f cargo.log
   if ((solana_program_count > 20)); then

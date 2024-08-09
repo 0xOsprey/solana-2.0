@@ -130,19 +130,19 @@ The identities of the
 A permissionless, persistent cluster for Solana users, builders, validators and token holders.
 
 - Tokens that are issued on Mainnet are **real** SOL
-- Gossip entrypoint for Mainnet: `entrypoint.mainnet.solana.com:8001`
+- Gossip entrypoint for Mainnet: `entrypoint.mainnet-beta.solana.com:8001`
 - Metrics environment variable for Mainnet:
 
 ```bash
-export SOLANA_METRICS_CONFIG="host=https://metrics.solana.com:8086,db=mainnet,u=mainnet_write,p=password"
+export SOLANA_METRICS_CONFIG="host=https://metrics.solana.com:8086,db=mainnet-beta,u=mainnet-beta_write,p=password"
 ```
 
-- RPC URL for Mainnet: `https://api.mainnet.solana.com`
+- RPC URL for Mainnet: `https://api.mainnet-beta.solana.com`
 
 ##### Example `solana` command-line configuration
 
 ```bash
-solana config set --url https://api.mainnet.solana.com
+solana config set --url https://api.mainnet-beta.solana.com
 ```
 
 ##### Example `solana-validator` command-line
@@ -160,11 +160,11 @@ $ solana-validator \
     --rpc-port 8899 \
     --private-rpc \
     --dynamic-port-range 8000-8020 \
-    --entrypoint entrypoint.mainnet.solana.com:8001 \
-    --entrypoint entrypoint2.mainnet.solana.com:8001 \
-    --entrypoint entrypoint3.mainnet.solana.com:8001 \
-    --entrypoint entrypoint4.mainnet.solana.com:8001 \
-    --entrypoint entrypoint5.mainnet.solana.com:8001 \
+    --entrypoint entrypoint.mainnet-beta.solana.com:8001 \
+    --entrypoint entrypoint2.mainnet-beta.solana.com:8001 \
+    --entrypoint entrypoint3.mainnet-beta.solana.com:8001 \
+    --entrypoint entrypoint4.mainnet-beta.solana.com:8001 \
+    --entrypoint entrypoint5.mainnet-beta.solana.com:8001 \
     --expected-genesis-hash 5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d \
     --wal-recovery-mode skip_any_corrupted_record \
     --limit-ledger-size
